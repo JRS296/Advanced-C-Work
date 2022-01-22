@@ -30,14 +30,14 @@ int main()
     }
     else
     {
-        if (ch == 'l')
+        if (ch == 'l' || ch == 'L')
         {
             if (n1 == 0)
                 swap(&arr[n1], &arr[n-1]);
             else
                 swap(&arr[n1], &arr[n1 - 1]);
         }
-        else if (ch == 'r')
+        else if (ch == 'r' || ch == 'R')
         {
             if (n1 == n)
                 swap(&arr[n1-1], &arr[0]);
