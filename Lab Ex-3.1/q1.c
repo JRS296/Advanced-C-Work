@@ -41,7 +41,7 @@ int main()
         {
             if (ch[j] > ch[j-1])
             {
-                swap(&ch[j], &ch[j+1]);
+                swap(&ch[j], &ch[j+1]); //Swap in descending 
             }
         } 
     }
