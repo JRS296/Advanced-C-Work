@@ -21,7 +21,7 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
-    printf("Enter position of element to be swapped, and specify if to the right(1) or left(0): \n");
+    printf("Enter position of element to be swapped, and specify if to the right(l) or left(r): \n");
     scanf("%d %c", &n1, &ch);
 
     if (n1 < 0 || n1 > n)
