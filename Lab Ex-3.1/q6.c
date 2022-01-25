@@ -1,45 +1,35 @@
-#include<stdio.h>
-
-void swap(int *xp, int *yp)
-{
-    int temp = *xp;
-    *xp = *yp;
-    *yp = temp;
-}
+#include <stdio.h>
 
 int main()
 {
-    int n; 
+    int n;
     char num;
     char arr[15];
     printf("Enter number of elements for Array: ");
     scanf("%d", &n);
-    
+    int x = n; //For some reason, n loses value by the time it reaches first for loop
+
     printf("Enter %d elements for Array: \n", n);
-    for(int i=0; i<n; i++)
+    for (int i = 0; i < n; i++)
     {
-        scanf("%c", &arr[i]);
+        scanf("%s", &arr[i]);
     }
 
-
     printf("Enter element to be searched from Array: ");
-    scanf("%c", &num);
-
-    for(int i=0; i<n; i++)
+    scanf("%s", &num);
+    
+    for (int j = 0; j < x; j++)
     {
-        if(num == i)
+        if (num == arr[j])
         {
-            printf("Element Found!");
-            arr[i] = '*';
-        }
-        else{
-            printf("Element not Found!");
+            arr[j] = '*';
+            continue;
         }
     }
 
     printf("Final Array: ");
-    for(int i=0; i<n; i++)
+    for (int i = 0; i < x; i++)
     {
-        printf("%c ",arr[i]);
+        printf("%c ", arr[i]);
     }
 }
