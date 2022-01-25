@@ -3,15 +3,15 @@
 void main()
 {
     int arr1[15], arr2[15], arr3[15], arr4[15];
-    int i, j = 0, k = 0, l = 0, n;
+    int i, j = 0, k = 0, l = 0, flag = 0, n;
 
-    printf("Input the number of elements to be stored in the array :");
+    printf("Input the number of elements to be stored in the array: ");
     scanf("%d", &n);
 
-    printf("Input %d elements in the array :\n", n);
+    printf("Input %d elements in the array: ", n);
     for (i = 0; i < n; i++)
     {
-        printf("element - %d : ", i);
+        printf("Element - %d : ", i + 1);
         scanf("%d", &arr1[i]);
     }
 
@@ -27,15 +27,21 @@ void main()
             arr3[k] = arr1[i];
             k++;
         }
-        int m = i / 2;
-        for (int z = 2; z <= m; z++)
+
+        for (int z = 1; z <= arr1[i]; z++)
         {
-            if (i % z == 0)
+            if (arr1[i] % z == 0)
             {
-                arr4[l] = arr1[i];
-                l++;
-            }  
+                flag++;
+            }
         }
+
+        if (flag == 2)
+        {
+            arr4[l] = arr1[i];
+            l++;
+        }
+        flag = 0;
     }
 
     printf("\nThe Even elements are : \n");
