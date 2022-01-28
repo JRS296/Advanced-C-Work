@@ -1,0 +1,1 @@
+//Q: WAP to find the maximum element in a given row and minimum element in a given column for a given matrix
