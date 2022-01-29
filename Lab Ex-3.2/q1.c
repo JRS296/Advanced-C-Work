@@ -46,8 +46,4 @@ int main()
             min[1] = i;
         }
     }
-
-    printf("\nMaximum no of Characters in String: %c - %d instances in string", st1[max[1]], max[0]);
-    printf("\nMinimum no of Characters in String: %c - %d instances in string", st1[min[1]], min[0]);
-    return 0;
 }
