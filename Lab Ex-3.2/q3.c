@@ -39,6 +39,8 @@ int main()
     ar4[x] = '\0';
 
     printf("Dr. A. P. J quotes follows: %s",ar4);
-    char arr[400];
+    char arr[400] = "";
     strcpy(ar4,arr);
+
+    printf("\n %s", arr);
 }
