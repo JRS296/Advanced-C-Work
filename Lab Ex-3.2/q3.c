@@ -1,3 +1,6 @@
+//Name: Jonathan Rufus Samuel - 20BCT0332
+//Advanced C Programming (ELA) Assignment - 2; Part-2 (Strings) - Q3
+
 #include <stdio.h>
 #include <string.h>
 #include <q4_var.h>

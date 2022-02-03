@@ -1,3 +1,6 @@
+//Name: Jonathan Rufus Samuel - 20BCT0332
+//Advanced C Programming (ELA) Assignment - 2; Part-1 (Arrays) - Q1
+
 #include <stdio.h>
 #include<stdlib.h>
 
