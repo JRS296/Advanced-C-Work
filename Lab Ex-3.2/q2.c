@@ -25,5 +25,13 @@ int main()
     }
     printf("\nInitial String: %s", ar1);
     printf("\nReversed String: %s", ar2);
+    int i=0;
+    while(ar2[i]!='@')
+    {
+        if(ar2[i]=='@')
+            break;
+        printf("%s",ar2[i]);
+        i++;
+    }
     return 0;
 }

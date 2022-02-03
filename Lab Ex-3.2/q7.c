@@ -2,37 +2,25 @@
 //Advanced C Programming (ELA) Assignment - 2; Part-2 (Strings) - Q7
 
 #include <stdio.h>
-
-int strlen(char str[])
-{
-    int i, len = 0;
-    for (i = 0; str[i] != '\0'; i++)
-    {
-        len++;
-    }
-    return (len);
-}
+#include <stdlib.h>
 
 int main()
 {
-    char str[100], c1 = ' ', c2;
-    int i;
-
+    char c2, str[100];
+    int i=0,countspace=0;;
     printf("Enter  the string: ");
     scanf("%[^\n]s", &str);
-    printf("Enter character to replace blankspace: ", c1);
+    printf("Enter character to replace blankspace: ", c2);
     scanf("%s", &c2);
-    printf("\nBefore replace: %s", str);
-
-    for (i = 0; str[i]; i++)
+    while(str[i]!='\0')
     {
-        if (str[i] == c1)
+        if(str[i]==' ')
         {
-            str[i] = c2;
+            str[i]= c2;
+            continue;
         }
+        i++;
     }
-
-    printf("\nAfter replace: %s", str);
-
+    printf("\nNew String: %s",str);
     return 0;
 }

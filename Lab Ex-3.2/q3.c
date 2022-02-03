@@ -2,8 +2,7 @@
 //Advanced C Programming (ELA) Assignment - 2; Part-2 (Strings) - Q3
 
 #include <stdio.h>
-#include <string.h>
-#include <q4_var.h>
+//#include <q4_var.h>
 
 int strlen(char str[])
 {
@@ -42,8 +41,8 @@ int main()
     ar4[x] = '\0';
 
     printf("Dr. A. P. J quotes follows: %s",ar4);
-    char arr[400] = "";
-    strcpy(ar4,arr);
+    //char arr[400] = "";
+    //strcpy(ar4,arr);
 
-    printf("\n %s", arr);
+    //printf("\n %s", arr);
 }

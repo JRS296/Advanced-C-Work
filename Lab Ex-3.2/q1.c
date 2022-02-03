@@ -41,12 +41,14 @@ int main()
         if (count(st1[i], st1) > max[0])
         {
             max[0] = count(st1[i], st1);
-            max[1] = i;
+            max[1] = st1[i];
         }
         else if (count(st1[i], st1) < min[0])
         {
             min[0] = count(st1[i], st1);
-            min[1] = i;
+            min[1] = st1[i];
         }
     }
+    printf("\nMaximum number of Characters: %c - %d",max[1],max[0]);
+    printf("\nMinimum number of Characters: %c - %d",min[1],min[0]);
 }
