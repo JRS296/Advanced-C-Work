@@ -1,3 +1,6 @@
+//Name: Jonathan Rufus Samuel - 20BCT0332
+//Advanced C Programming (ETH) Exercise 1 - qb.c - 26.02.2022
+
 /*
 b. Write a function that compares two given dates. To store a date use a structure that contains
 three members namely day, month and year. If the dates are equal the function should

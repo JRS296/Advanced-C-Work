@@ -1,3 +1,6 @@
+//Name: Jonathan Rufus Samuel - 20BCT0332
+//Advanced C Programming (ETH) Exercise 1 - qa.c - 26.02.2022
+
 /*
 a. Create a structure to specify data of customers in a bank. The data to be stored is: Account
 number, Name, Balance in account. Assume maximum of 100 customers in the bank.
