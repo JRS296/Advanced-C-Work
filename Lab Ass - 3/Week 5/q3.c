@@ -1,0 +1,1 @@
+//Write a program to check the given number is existing or not using pointers.

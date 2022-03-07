@@ -1,0 +1,1 @@
+//Write a program to identify the highest number and number of times it occurred.
