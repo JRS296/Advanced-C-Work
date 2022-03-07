@@ -1,6 +1,8 @@
 // Write a 'C' Program to create a structure of student having fields roll_no, stud_name, mark1, mark2,
 // mark3. Calculate total marks and average marks. Arrange the records in descending order of marks.
 
+//Using: Array of Structures
+
 #include <stdio.h>
 struct student
 {
