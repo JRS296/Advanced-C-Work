@@ -9,20 +9,29 @@ struct player
     char name[20];
     int runs;
 };
+
 int main()
 {
     int i, s = 0;
-    struct player a[11]; // a[11] - no. of players
+    struct player a[11]; 
+    struct player *ptr = NULL;
+    ptr = a;
     printf("Enter Name of Player Runs Scored \n");
-    printf("---------------------------------------------\n\t");
+    printf("---------------------------------------------\n");
     for (i = 0; i <= 10; i++)
     {
-        scanf("%s", a[i].name);
-        scanf("%d", &a[i].runs);
-        printf("\t");
+        scanf("%s", ptr->name);
+        scanf("%d", &ptr->runs);
+        printf("\n");
+        ptr++;
     }
+    ptr = a;
+
     for (i = 0; i <= 10; i++)
-        s = s + a[i].runs;
+    {
+        s += (ptr->runs);
+        ptr++;
+    }  
     printf("\n---------------------------------------------\n");
     printf("Total Runs Scored by Team: %d", s);
     return 0;
