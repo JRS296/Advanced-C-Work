@@ -7,7 +7,7 @@
 
 int main()
 {
-    int row = 50, col = 60, len = 0;
+    int row = 5, col = 6, len = 0;
     float *arr = (float *)malloc(row * col * sizeof(float));
     int i, j;
 

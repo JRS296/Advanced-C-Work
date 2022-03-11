@@ -1,7 +1,7 @@
 // Write C program to accept batting information of cricket team using structure. It contains player
 // name and runs scored by a player. Calculate total runs scored by the cricket team.
 
-//Using: pass the address of the structure variable to user defined function and display the contents. 
+//Using: Array of Structures
 
 #include <stdio.h>
 struct player

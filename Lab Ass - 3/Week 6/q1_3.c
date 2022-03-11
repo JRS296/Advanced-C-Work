@@ -2,7 +2,7 @@
 // salary. Accept the details of 'n' Employees from the user and perform the following operations using
 // function. - Search by Emp-Id - Display All - Display Names of Employee having Salary > 10000
 
-//Using: pass the address of the structure variable to user defined function and display the contents. 
+//Using: Array of Structures
 
 #include <stdio.h>
 #include <stdlib.h>
