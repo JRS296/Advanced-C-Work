@@ -5,10 +5,6 @@
 //For example, if character ‘A’ is read from the source file, and if we have decided that every ‘A’ is
 //to be substituted by ‘!’, then a ‘!’ would be written to the target file in place of every ‘A’. 
 
-// Name: Jonathan Rufus Samuel (20BCT0332) - 19.03.2022
-// Q2 - Write a program to copy contents of one file to another, while doing so replace all lowercase
-// characters to their equivalent uppercase characters.
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -36,6 +32,12 @@ int main()
         if (ch == 'A' || ch == 'a')
         {
             ch = '!';
+            fputc(ch, fp2);
+            continue;
+        }
+        else if(ch == 'B' || ch == 'b')
+        {
+            ch = '5';
             fputc(ch, fp2);
             continue;
         }
