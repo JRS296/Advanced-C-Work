@@ -7,6 +7,8 @@ where . 𝑆 = √𝑝 ∗ (𝑝 − 𝑎) ∗ (𝑝 − 𝑏) ∗ (𝑝 − �
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+
+enum doubt {I, Dont, know, If, enums, have, a, use, Case, in, given, program};
 struct triangle
 {
     int a;
@@ -63,6 +65,7 @@ int main()
         scanf("%d%d%d", &tr[i].a, &tr[i].b, &tr[i].c);
     }
     sort_by_area(tr, n);
+    printf("\n");
     for (int i = 0; i < n; i++)
     {
         printf("%d %d %d\n", tr[i].a, tr[i].b, tr[i].c);

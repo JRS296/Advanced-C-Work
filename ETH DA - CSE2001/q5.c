@@ -76,7 +76,7 @@ int main()
 {
     int n;
     scanf("%d", &n);
-
+    
     char **arr;
     arr = (char **)malloc(n * sizeof(char *));
 
@@ -87,6 +87,7 @@ int main()
         *(arr + i) = realloc(*(arr + i), strlen(*(arr + i)) + 1);
     }
 
+    printf("\nOutput:\n");
     string_sort(arr, n, lexicographic_sort);
     for (int i = 0; i < n; i++)
         printf("%s\n", arr[i]);
