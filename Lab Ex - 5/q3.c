@@ -9,87 +9,9 @@ substituted by ‘5’ and so on.*/
 
 #include <stdio.h>
 #include <conio.h>
+#include <stdlib.h>
 
-void main()
-{ /* substitution cipher encryption */
-
-    /* all vowels have been exchanged with first five ascii characters and
-     every space has been converted to 6th ascii character */
-
-    FILE *fp, *ft;
-    char ch;
-
-    clrscr();
-
-    fp = fopen("data.txt", "r");
-    ft = fopen("temp.txt", "w");
-
-    if (fp == NULL)
-    {
-        printf("cannot open one of files!");
-        exit();
-    }
-
-    while (1)
-    {
-
-        ch = fgetc(fp);
-
-        if (ch == EOF)
-            break;
-
-        encrypt(&ch); /* function for encryption */
-
-        fputc(ch, ft);
-    }
-
-    fclose(fp);
-    fclose(ft);
-
-    remove("data.txt");
-    rename("temp.txt", "data.txt");
-
-    printf("task completed!");
-    getch();
-
-
-    FILE *fp, *ft;
-    char ch;
-
-    fp = fopen("data.txt", "r");
-    ft = fopen("temp.txt", "w");
-
-    if (fp == NULL)
-    {
-        printf("cannot open one of files!");
-
-        exit();
-    }
-
-    while (1)
-    {
-
-        ch = fgetc(fp);
-
-        if (ch == EOF)
-            break;
-
-        decrypt(&ch); /* function for decryption */
-
-        fputc(ch, ft);
-    }
-
-    fclose(fp);
-    fclose(ft);
-
-    remove("data.txt");
-    rename("temp.txt", "data.txt");
-
-    printf("task completed!");
-    getch();
-}
-
-encrypt(char *c)
+char encrypt(char *c)
 {
 
     if (*c == 'a')
@@ -125,7 +47,7 @@ encrypt(char *c)
     return *c;
 }
 
-decrypt(char *c)
+char decrypt(char *c)
 {
 
     if (*c == '!')
@@ -148,3 +70,36 @@ decrypt(char *c)
 
     return *c;
 }
+
+void main()
+{
+    FILE *fp, *ft;
+    char ch;
+
+    fp = fopen("file1.txt", "r");
+    ft = fopen("NEW FILE.txt", "w");
+
+    if (fp == NULL)
+    {
+        printf("cannot open one of files!");
+        exit(0);
+    }
+    while (1)
+    {
+        ch = fgetc(fp);
+        if (ch == EOF)
+            break;
+        encrypt(&ch); // OR decrypt(&ch)
+        fputc(ch, ft);
+    }
+
+    fclose(fp);
+    fclose(ft);
+
+    remove("data.txt");
+    rename("temp.txt", "data.txt");
+
+    printf("task completed!");
+    getch();
+}
+

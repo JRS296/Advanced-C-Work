@@ -13,7 +13,7 @@ void frev(FILE *);
 int main()
 {
     FILE *fp;
-    fp = fopen("File (r).txt", "r");
+    fp = fopen("file1.txt", "r");
     if (fp == NULL)
     {
         puts("File cannot be opened.\n");
@@ -27,7 +27,7 @@ int main()
 
 void frev(FILE *fp)
 {
-    char word[11];
+    char word[5000];
     int i;
     for (i = 0; 1; i++)
     {

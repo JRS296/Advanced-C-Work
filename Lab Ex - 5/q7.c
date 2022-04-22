@@ -11,7 +11,6 @@ macros you defined in (1) and (2) above.
 #define isUPPER(ch) (ch >= 'A' && ch <= 'Z')
 #define isLOWER(ch) (ch >= 'a' && ch <= 'z')
 #define isALPHABET(ch) (isUPPER(ch) || isLOWER(ch))
-#define BIGGEST(a, b) ((a > b) ? printf("%d is the biggest\n", a) : printf("%d is the biggest\n", b))
 
 int main()
 {
@@ -20,9 +19,9 @@ int main()
 
     do
     {
-        printf("1. Check if entered character is upper or lower case\n");
-        printf("2. Check if entered character is alphabet or not\n");
-        printf("3. Find biggest of 2 numbers\n");
+        printf("1. Check if entered character is upper case\n");
+        printf("2. Check if entered character is lower case\n");
+        printf("3. Check if entered character is alphabet or not\n");
 
         printf("\nEnter your choice\n");
         scanf(" %c", &choice);
@@ -30,24 +29,34 @@ int main()
         switch (choice)
         {
         case '1':
-            printf("\nEnter a character\n");
+            printf("\nEnter a character: \n");
             scanf(" %c", &ch);
 
             if (isUPPER(ch))
             {
                 printf("Entered character is upper case letter\n");
             }
-            else if (isLOWER(ch))
+            else
             {
-                printf("Entered character is lower case letter\n");
+                printf("It is not a upper case character\n");
+            }
+            break;
+
+        case '2':
+            printf("\nEnter a character: \n");
+            scanf(" %c", &ch);
+
+            if (isLOWER(ch))
+            {
+                printf("Entered character is Lower case letter\n");
             }
             else
             {
-                printf("Please enter a valid alphabet\n");
+                printf("It is not a lower case character\n");
             }
-
             break;
-        case '2':
+
+        case '3':
             printf("\nEnter a character\n");
             scanf(" %c", &ch);
 
@@ -59,13 +68,6 @@ int main()
             {
                 printf("Entered character is not an alphabet\n");
             }
-            break;
-        case '3':
-            printf("\nEnter 2 numbers\n");
-            scanf("%d%d", &a, &b);
-
-            BIGGEST(a, b);
-
             break;
         default:
             printf("\nPlease enter valid choice\n");

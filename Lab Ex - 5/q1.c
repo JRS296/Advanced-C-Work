@@ -9,7 +9,7 @@ int main()
     FILE *fp;
     int i = 1;
     char ch;
-    fp = fopen("File (a).txt", "r+");
+    fp = fopen("file1.txt", "r+");
     if (fp == NULL)
     {
         puts("\nFile can't be open");

@@ -12,9 +12,8 @@
 void delart(char *);
 
 int main()
-
 {
-    delart("Temp.txt");
+    delart("file1.txt");
     _getch();
     return 0;
 }
@@ -23,7 +22,7 @@ void delart(char *file)
 {
     FILE *fp, *nf;
     int i;
-    char word[20];
+    char word[20000];
     fp = fopen(file, "r+");
     nf = fopen("NEW FILE.txt", "w");
     if (fp == NULL)
@@ -51,9 +50,6 @@ void delart(char *file)
                 fputc(' ', nf);
             }
             i = -1;
-            /*After the loop ends, i increament by 1,
-            so -1 becomes 0 and	next character saved
-            in the word[0]*/
         }
     }
 }

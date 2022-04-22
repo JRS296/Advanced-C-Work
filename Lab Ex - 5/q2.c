@@ -8,13 +8,13 @@ int main()
 {
     FILE *fp1, *fp2;
     char ch;
-    fp1 = fopen("source.txt", "r");
+    fp1 = fopen("file1.txt", "r");
     if (fp1 == NULL)
     {
         puts("File does not exist..");
         exit(1);
     }
-    fp2 = fopen("target.txt", "w");
+    fp2 = fopen("NEW FILE.txt", "w");
     if (fp2 == NULL)
     {
         puts("File does not exist..");
